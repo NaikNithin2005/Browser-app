@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#060E33"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:padding="7dp"
+        android:background="@drawable/round_corner"
+        android:id="@+id/input">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo1"
+            android:id="@+id/link"
+            android:layout_centerVertical="true"
+
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/clear"
+            android:layout_toEndOf="@+id/link"
+            android:background="@null"
+            android:hint="Search"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_centerVertical="true"
+            android:imeOptions="actionGo"
+            android:id="@+id/url_input"
+            android:inputType="textUri"
+            android:singleLine="true"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/x"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/clear"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#786565"
+        android:layout_below="@+id/input"
+        android:id="@+id/divider_1"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_below="@+id/input"
+        android:visibility="invisible"
+        />
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/web_view"
+        android:layout_below="@+id/divider_1"
+        android:layout_above="@id/divider_2"
+        android:background="@drawable/round_corner"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#786565"
+        android:id="@+id/divider_2"
+        android:layout_above="@id/bottom_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_layout"
+        android:orientation="horizontal"
+        android:background="#8F9097"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="50dp"
+            android:src="@drawable/back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/back"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="50dp"
+            android:src="@drawable/forward"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/forword"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="70dp"
+            android:src="@drawable/refresh"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/refresh"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="40dp"
+            android:src="@drawable/share"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/share"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
